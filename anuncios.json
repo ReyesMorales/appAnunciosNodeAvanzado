@@ -1,0 +1,204 @@
+[
+    {
+        "titulo": "Compro bicicleta de montaña",
+        "descripcion": "Estoy buscando una bicicleta de montaña en buen estado",
+        "tipo": "compra",
+        "precio": 200,
+        "tags": [
+            "motor",
+            "lifestyle"
+        ]
+    },
+    {
+        "titulo": "Compro silla de oficina",
+        "descripcion": "Estoy buscando una silla de oficina con respaldo alto y ruedas",
+        "tipo": "compra",
+        "precio": 80,
+        "tags": [
+            "work"
+        ]
+    },
+    {
+        "titulo": "Compro smartphone Apple iPhone",
+        "descripcion": "Estoy buscando un smartphone Apple iPhone en buen estado",
+        "tipo": "compra",
+        "precio": 200,
+        "tags": [
+            "mobile",
+            "lifestyle"
+        ]
+    },
+    {
+        "titulo": "Compro moto Harley-Davidson",
+        "descripcion": "Estoy buscando una moto Harley-Davidson en buen estado",
+        "tipo": "compra",
+        "precio": 5000,
+        "tags": [
+            "motor",
+            "lifestyle"
+        ]
+    },
+    {
+        "titulo": "Compro escritorio de madera",
+        "descripcion": "Estoy buscando un escritorio de madera en buen estado",
+        "tipo": "compra",
+        "precio": 70,
+        "tags": [
+            "work",
+            "lifestyle"
+        ]
+    },
+    {
+        "titulo": "Compro tablet Samsung Galaxy Tab",
+        "descripcion": "Estoy buscando una tablet Samsung Galaxy Tab en buen estado",
+        "tipo": "compra",
+        "precio": 100,
+        "tags": [
+            "mobile",
+            "lifestyle"
+        ]
+    },
+    {
+        "titulo": "Compro amplificador para guitarra eléctrica",
+        "descripcion": "Estoy buscando un amplificador para guitarra eléctrica en buen estado",
+        "tipo": "compra",
+        "precio": 80,
+        "tags": [
+            "lifestyle"
+        ]
+    },
+    {
+        "titulo": "Compro moto Kawasaki Ninja",
+        "descripcion": "Estoy buscando una moto Kawasaki Ninja en buen estado",
+        "tipo": "compra",
+        "precio": 2000,
+        "tags": [
+            "motor",
+            "lifestyle"
+        ]
+    },
+    {
+        "titulo": "Compro escritorio para computadora",
+        "descripcion": "Estoy buscando un escritorio para computadora en buen estado",
+        "tipo": "compra",
+        "precio": 100,
+        "tags": [
+            "work",
+            "lifestyle"
+        ]
+    },
+    {
+        "titulo": "Compro reloj Garmin",
+        "descripcion": "Estoy buscando un reloj Garmin en buen estado",
+        "tipo": "compra",
+        "precio": 200,
+        "tags": [
+            "lifestyle"
+        ]
+    },
+    {
+        "titulo": "Bicicleta de montaña",
+        "descripcion": "Bicicleta de montaña en excelente estado",
+        "tipo": "venta",
+        "precio": 200,
+        "foto": "https://i.pinimg.com/originals/69/b8/df/69b8dffc0a1451b22b9e47d802f03b50.jpg",
+        "tags": [
+            "motor"
+        ]
+    },
+    {
+        "titulo": "Silla de escritorio",
+        "descripcion": "Silla de escritorio con respaldo alto y ruedas",
+        "tipo": "venta",
+        "precio": 50,
+        "foto": "https://www.oficinasmontiel.com/57438-home_default/silla-giratoria-de-escritorio-sin-brazos-mm451-de-montiel.jpg",
+        "tags": [
+            "work"
+        ]
+    },
+    {
+        "titulo": "Smartphone Samsung",
+        "descripcion": "Smartphone Samsung Galaxy S10 en perfecto estado",
+        "tipo": "venta",
+        "precio": 300,
+        "foto": "https://bilbotruke.net/44347-large_default/samsung-galaxy-j4-plus-32gb.jpg",
+        "tags": [
+            "mobile",
+            "lifestyle"
+        ]
+    },
+    {
+        "titulo": "Moto Honda CBR",
+        "descripcion": "Moto Honda CBR 600 en excelente estado",
+        "tipo": "venta",
+        "precio": 5000,
+        "foto": "https://cuimobucket.s3.eu-west-1.amazonaws.com/HONDA-CBR-600-RR-2010-Cadiz-0f82d7c5-1669800152162.jpeg",
+        "tags": [
+            "motor",
+            "lifestyle"
+        ]
+    },
+    {
+        "titulo": "Escritorio de madera",
+        "descripcion": "Escritorio de madera con cajones y repisas",
+        "tipo": "venta",
+        "precio": 100,
+        "foto": "https://cloud10.todocoleccion.online/segunda-mano/tc/2022/01/04/20/310454483_tcimg_CE34EC3C.jpg",
+        "tags": [
+            "work",
+            "lifestyle"
+        ]
+    },
+    {
+        "titulo": "Tablet Apple iPad",
+        "descripcion": "Tablet Apple iPad en perfecto estado",
+        "tipo": "venta",
+        "precio": 400,
+        "foto": "http://www.manzanasusadas.com/resources/archivosbd/productos_galeria/2017/vender-ipad-ipad-air-apple-segunda-mano-608320171108220447-1.jpg",
+        "tags": [
+            "mobile"
+        ]
+    },
+    {
+        "titulo": "Guitarra eléctrica",
+        "descripcion": "Guitarra eléctrica con amplificador",
+        "tipo": "venta",
+        "precio": 300,
+        "foto": "https://mercasonic.soniccdn.com/sda/large/1496/3971496.jpg",
+        "tags": [
+            "lifestyle"
+        ]
+    },
+    {
+        "titulo": "Moto Yamaha R1",
+        "descripcion": "Moto Yamaha R1 1000cc en excelente estado",
+        "tipo": "venta",
+        "precio": 8000,
+        "foto": "https://cuimobucket.s3.eu-west-1.amazonaws.com/YAMAHA-YZF-R1-2002-Madrid-7e504ada-1655134132333.jpeg",
+        "tags": [
+            "motor",
+            "lifestyle"
+        ]
+    },
+    {
+        "titulo": "Mesa de trabajo",
+        "descripcion": "Mesa de trabajo con espacio para herramientas",
+        "tipo": "venta",
+        "precio": 150,
+        "foto": "https://cdn.maquinariahosteleriaocasion.com/wp-content/uploads/2022/05/i2602390405-313x234.webp",
+        "tags": [
+            "work"
+        ]
+    },
+    {
+        "titulo": "Reloj Apple Watch",
+        "descripcion": "Reloj Apple Watch Series 5 en perfecto estado",
+        "tipo": "venta",
+        "precio": 250,
+        "foto": "https://www.manzanasusadas.com/resources/archivosbd/productos_galeria/vender-apple-watch-watch-series-5-apple-segunda-mano-20211202092625-1-355x355.jpeg",
+        "tags": [
+            "mobile",
+            "lifestyle"
+        ]
+    }
+]

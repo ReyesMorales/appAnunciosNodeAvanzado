@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Nodepop</title>
+	<style>
+		img.anuncio-img {
+		  max-width: 100%;
+		  max-height: 200px;
+		}
+	  </style>
+</head>
+
+<body>
+	<h1>Anuncios</h1>
+	<% anuncios.forEach(anuncio=> { %>
+		<div>
+			<h2>
+				<%= anuncio.titulo %>
+			</h2>
+			<p><strong>Descripción:</strong>
+				<%= anuncio.descripcion %>
+			</p>
+			<p><strong>Tipo:</strong>
+				<%= anuncio.tipo %>
+			</p>
+			<p><strong>Precio:</strong>
+				<%= anuncio.precio %>
+			</p>
+			<% if (anuncio.foto) { %>
+				<img class="anuncio-img" src="<%= anuncio.foto %>" alt="Foto del anuncio">
+				<% } %>
+					<p><strong>Tags:</strong>
+						<% anuncio.tags.forEach(tag=> { %>
+							<%= tag.nombre %>
+								<% }); %>
+					</p>
+		</div>
+		<% }); %>
+</body>
+
+</html>
