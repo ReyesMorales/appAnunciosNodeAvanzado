@@ -4,7 +4,7 @@ var Anuncio = require('../models/Anuncio');
 var Tag = require('../models/Tag');
 
 router.get('/', async (req, res, next) => {
-    const limit = parseInt(req.query.limit) || 10;
+    const limit = parseInt(req.query.limit) || 20;
     const skip = parseInt(req.query.skip) || 0;
 
     const filtros = {};

@@ -6,7 +6,7 @@ var Tag = require('../models/Tag');
 
 router.get('/', async (req, res, next) => {
     try {
-        const limit = parseInt(req.query.limit) || 10;
+        const limit = parseInt(req.query.limit) || 20;
         const skip = parseInt(req.query.skip) || 0;
 
         const filtros = {};
