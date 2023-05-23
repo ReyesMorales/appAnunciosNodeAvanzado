@@ -12,25 +12,25 @@
 </head>
 
 <body>
-	<h1>Anuncios</h1>
+	<h1> <%= __('Welcome to our adverts section') %> </h1>
 	<% anuncios.forEach(anuncio=> { %>
 		<div>
 			<h2>
 				<%= anuncio.titulo %>
 			</h2>
-			<p><strong>Descripción:</strong>
+			<p><strong> <%=__('Description') %>:</strong>
 				<%= anuncio.descripcion %>
 			</p>
-			<p><strong>Tipo:</strong>
+			<p><strong> <%=__('Type') %>:</strong>
 				<%= anuncio.tipo %>
 			</p>
-			<p><strong>Precio:</strong>
+			<p><strong> <%=__('Price') %>:</strong>
 				<%= anuncio.precio %>
 			</p>
 			<% if (anuncio.foto) { %>
 				<img class="anuncio-img" src="<%= anuncio.foto %>" alt="Foto del anuncio">
 				<% } %>
-					<p><strong>Tags:</strong>
+					<p><strong> <%=__('Tags') %>:</strong>
 						<% anuncio.tags.forEach(tag=> { %>
 							<%= tag.nombre %>
 								<% }); %>
