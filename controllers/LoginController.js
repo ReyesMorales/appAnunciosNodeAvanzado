@@ -21,7 +21,7 @@ class LoginController {
 
             }
 
-            res.send('ok');
+            res.redirect('/privado');
         } catch (error) {
             next(error);
         }
