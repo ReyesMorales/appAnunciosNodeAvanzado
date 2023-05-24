@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
-const Anuncio = require('../models/Anuncio');
-const Tag = require('../models/Tag');
+const { Anuncio, Tag, Usuario } = require('../models');
 const anunciosJson = require('../anuncios.json');
 const { dbUrl } = require('../config');
 
@@ -34,8 +33,21 @@ mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
       await cargarDatos(Anuncio, results);
     });
 
+    await initUsuarios();
+
     console.log('Datos iniciales cargados con éxito');
 
     mongoose.connection.close();
   })
   .catch(error => console.log(`Error al conectar con la base de datos: ${error}`));
+
+  async function initUsuarios() {
+    const deleted = await Usuario.deleteMany();
+    console.log(`Eliminados ${deleted.deletedCount} usuarios`);
+
+    const inserted = await Usuario.insertMany([
+      { email: 'user@example.com', password: '1234' },
+      { email: 'user2@example.com', password: '5678' }
+    ]);
+    console.log(`Creados ${inserted.length} usuarios`);
+  }
