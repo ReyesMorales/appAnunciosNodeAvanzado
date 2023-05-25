@@ -6,6 +6,9 @@ var logger = require('morgan');
 const i18n = require('./lib/i18nConfigure');
 const LoginController = require('./controllers/LoginController');
 const PrivadoController = require('./controllers/PrivadoController');
+const session = require('express-session');
+const sessionAuth = require('./lib/sessionAuthMiddleware');
+
 
 require('./lib/connectMongoose');
 
@@ -25,6 +28,15 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(i18n.init);
+app.use(session({
+  name: 'nodepop-session',
+  secret:'ajajsojpjf123',
+  saveUninitialized: true,
+  resave: false,
+  cookie: {
+    maxAge: 1000 * 60 * 60 * 24 * 2
+  }
+}))
 
 const loginController = new LoginController();
 const privadoController = new PrivadoController();
@@ -35,7 +47,7 @@ app.use('/features', require('./routes/features'));
 app.use('/change-locale', require('./routes/change-locale'));
 app.get('/login', loginController.index);
 app.post('/login', loginController.post);
-app.get('/privado', privadoController.index);
+app.get('/privado', sessionAuth, privadoController.index);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

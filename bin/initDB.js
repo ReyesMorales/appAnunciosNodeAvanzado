@@ -3,6 +3,7 @@ const { Anuncio, Tag, Usuario } = require('../models');
 const anunciosJson = require('../anuncios.json');
 const { dbUrl } = require('../config');
 
+
 const cargarDatos = async (modelo, datos) => {
   try {
     await modelo.deleteMany({});
@@ -46,8 +47,8 @@ mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
     console.log(`Eliminados ${deleted.deletedCount} usuarios`);
 
     const inserted = await Usuario.insertMany([
-      { email: 'user@example.com', password: '1234' },
-      { email: 'user2@example.com', password: '5678' }
+      { email: 'user@example.com', password: await Usuario.hashPassword('1234') },
+      { email: 'user2@example.com', password: await Usuario.hashPassword('5678') }
     ]);
     console.log(`Creados ${inserted.length} usuarios`);
   }

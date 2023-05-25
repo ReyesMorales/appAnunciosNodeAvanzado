@@ -13,13 +13,15 @@ class LoginController {
 
             const usuario = await Usuario.findOne({ email: email });
 
-            if(!usuario || usuario.password !== password) {
+            if (!usuario || !(await usuario.comparePassword(password))) {
                 res.locals.error = req.__('Invalid credentials');
                 res.locals.email = email;
                 res.render('login');
                 return;
 
             }
+
+            req.session.usuarioRegistrado = usuario._id;
 
             res.redirect('/privado');
         } catch (error) {
