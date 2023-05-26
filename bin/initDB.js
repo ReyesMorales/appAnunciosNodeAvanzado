@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { Anuncio, Tag, Usuario } = require('../models');
 const anunciosJson = require('../anuncios.json');
-const { dbUrl } = require('../config');
+require('dotenv').config();
 
 
 const cargarDatos = async (modelo, datos) => {
@@ -14,7 +14,7 @@ const cargarDatos = async (modelo, datos) => {
   }
 };
 
-mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGODB_CONNECTION_STR, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(async () => {
     console.log('Conexión a la base de datos establecida');
 

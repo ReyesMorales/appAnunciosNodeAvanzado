@@ -8,6 +8,7 @@ const LoginController = require('./controllers/LoginController');
 const PrivadoController = require('./controllers/PrivadoController');
 const session = require('express-session');
 const sessionAuth = require('./lib/sessionAuthMiddleware');
+const MongoStore = require('connect-mongo'); 
 
 
 require('./lib/connectMongoose');
@@ -27,6 +28,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 app.use(i18n.init);
 app.use(session({
   name: 'nodepop-session',
@@ -35,7 +37,10 @@ app.use(session({
   resave: false,
   cookie: {
     maxAge: 1000 * 60 * 60 * 24 * 2
-  }
+  },
+  store: MongoStore.create({
+    mongoUrl: process.env.MONGODB_CONNECTION_STR
+  })
 }))
 
 const loginController = new LoginController();

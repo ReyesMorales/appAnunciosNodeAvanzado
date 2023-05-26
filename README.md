@@ -10,10 +10,10 @@ Instalamos las dependencias con:
 npm install
 ```
 
-Para comenzar en modo desarrollo:
+Copia .env.example en .env y personalizalo con tus variables.
 
-```sh
-npm run dev
+```
+cp .env.example .env
 ```
 
 Iniciamos la base de datos:
@@ -21,6 +21,14 @@ Iniciamos la base de datos:
 ```sh
 npm run initDB
 ```
+
+Para comenzar en modo desarrollo:
+
+```sh
+npm run dev
+```
+
+
 
 ## Iniciamos MongoDB Server en Macos o Linux
 
