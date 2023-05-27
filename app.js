@@ -9,6 +9,7 @@ const PrivadoController = require('./controllers/PrivadoController');
 const session = require('express-session');
 const sessionAuth = require('./lib/sessionAuthMiddleware');
 const MongoStore = require('connect-mongo'); 
+const jwtAuthMiddleware = require('./lib/jwtAuthMiddleware');
 
 
 require('./lib/connectMongoose');
@@ -29,6 +30,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+
+const loginController = new LoginController();
+app.post('/api/login', loginController.postAPI);
+
 app.use(i18n.init);
 app.use(session({
   name: 'nodepop-session',
@@ -43,14 +48,14 @@ app.use(session({
   })
 }))
 
-const loginController = new LoginController();
 const privadoController = new PrivadoController();
-                           
-var indexRouter = require('./routes/index');
+
+
 app.use((req, res, next) => {
   res.locals.session = req.session;
   next();
 })
+var indexRouter = require('./routes/index');
 app.use('/', indexRouter);
 app.use('/features', require('./routes/features'));
 app.use('/change-locale', require('./routes/change-locale'));
