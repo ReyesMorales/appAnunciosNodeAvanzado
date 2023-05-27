@@ -12,5 +12,8 @@
 	"Invalid credentials": "Credenciales inválidas",
 	"Private zone": "Zona privada",
 	"User email is": "El email del usuario es",
-	"Welcome": "Bienvenido"
+	"Welcome": "Bienvenido",
+	"Logout": "Logout",
+	"Login": "Login",
+	"Private": "Privado"
 }

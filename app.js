@@ -47,11 +47,16 @@ const loginController = new LoginController();
 const privadoController = new PrivadoController();
                            
 var indexRouter = require('./routes/index');
+app.use((req, res, next) => {
+  res.locals.session = req.session;
+  next();
+})
 app.use('/', indexRouter);
 app.use('/features', require('./routes/features'));
 app.use('/change-locale', require('./routes/change-locale'));
 app.get('/login', loginController.index);
 app.post('/login', loginController.post);
+app.get('/logout', loginController.logout);
 app.get('/privado', sessionAuth, privadoController.index);
 
 // catch 404 and forward to error handler
