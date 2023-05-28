@@ -15,11 +15,11 @@ const Tag = require('../models/Tag');
 
 /* API methods */
 router.use('/getadverts', jwtAuthMiddleware, getAdvertsRouter);
-router.use('/createadvert', createAdvertRouter);
-router.use('/getAdvertById', getAdvertByIdRouter);
-router.use('/updateAdvert', updateAdvertRouter);
-router.use('/deleteAdvert', deleteAdvertRouter);
-router.use('/getTags', getTagsRouter);
+router.use('/createadvert', jwtAuthMiddleware, createAdvertRouter);
+router.use('/getAdvertById', jwtAuthMiddleware, getAdvertByIdRouter);
+router.use('/updateAdvert', jwtAuthMiddleware, updateAdvertRouter);
+router.use('/deleteAdvert', jwtAuthMiddleware, deleteAdvertRouter);
+router.use('/getTags', jwtAuthMiddleware, getTagsRouter);
 
 router.use('/', getHomePage);
 
