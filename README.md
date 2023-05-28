@@ -48,7 +48,6 @@ npx express-generator nodepop --ejs
 |   Metodo  |    URL                                       | Descripcion                  |   Error   |
 | :-------- | :--------------------------------------------| :-------------------------   | :---------|
 |    POST    | `https://http://127.0.0.1:3000/api/login`   | Registro del usuario         | 401       |
-
 |    GET    | `https://http://127.0.0.1:3000/`             | Muestra la pagina principal  |           |
 |    GET    | `https://http://127.0.0.1:3000/getadverts`   | Muestra todos los anuncios   |           |
 |    GET    | `https://http://127.0.0.1:3000/getadvertbyid`| Filtra por el id del anuncio | 404       |
