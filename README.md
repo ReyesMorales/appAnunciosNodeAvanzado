@@ -28,8 +28,6 @@ Para comenzar en modo desarrollo:
 npm run dev
 ```
 
-
-
 ## Iniciamos MongoDB Server en Macos o Linux
 
 En una consola aparte accedemos al directorio correspondiente y escribimos la siguiente ruta para ejecutar MongoDB:
@@ -49,7 +47,9 @@ npx express-generator nodepop --ejs
 
 |   Metodo  |    URL                                       | Descripcion                  |   Error   |
 | :-------- | :--------------------------------------------| :-------------------------   | :---------|
-|    GET    | `https://http://127.0.0.1:3000/`             | Muestra todos los anuncios   |           |
+|    POST    | `https://http://127.0.0.1:3000/api/login`   | Registro del usuario         | 401       |
+
+|    GET    | `https://http://127.0.0.1:3000/`             | Muestra la pagina principal  |           |
 |    GET    | `https://http://127.0.0.1:3000/getadverts`   | Muestra todos los anuncios   |           |
 |    GET    | `https://http://127.0.0.1:3000/getadvertbyid`| Filtra por el id del anuncio | 404       |
 |    GET    | `https://http://127.0.0.1:3000/gettags`      | Muestra los tags existentes  |           |
